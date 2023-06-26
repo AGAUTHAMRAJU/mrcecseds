@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRCE</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <div>
+        <div class="img">
+            <img src="{% static 'logo.png' %}" alt="Data Science" height="605px" width="600px"/><br><br><br>
+        </div>
+        <div>
+            <p class="clgname">
+                <b>MALLA REDDY</b>
+            </p>
+            <p class="eng">
+                COLLEGE OF ENGINEERING
+            </p>
+            <p style="font-size: 30px; text-align: center;">
+                Department of Computer Science and Engineering (Data Science)
+            </p>
+        </div>
+    </div>
+    <div class="field1">
+        <form action="login" method="POST">
+            {% csrf_token %}
+            <fieldset id="legend1">
+                <legend >
+                    <b>LOGIN</b>
+                </legend>
+                <div class="input1">
+                    <input type="text" name="username" placeholder="USERNAME" id="usr"><br><br>
+                    <input type="password" name="password" placeholder="PASSWORD" id="pswd"><br><br>
+                    <button id="btn"><b>SUBMIT</b></button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
